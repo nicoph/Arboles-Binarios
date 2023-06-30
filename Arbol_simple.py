@@ -38,6 +38,7 @@ class ArbolBinarioSimple:
             else:
                 self._agregar_nodo_recursivo(valor, nodo_actual.derecha)
                 
+                
     ## Compara el valor a insertar con el valor del nodo actual. Si es menor, verifica si el nodo izquierdo 
     ##está vacío y, de ser así, crea un nuevo nodo con el valor y lo establece como el nodo izquierdo. 
     ##Si el nodo izquierdo no está vacío, la función se llama a sí misma de manera recursiva con el nodo izquierdo como parámetro.
@@ -76,7 +77,8 @@ class ArbolBinarioSimple:
             self.agregar_nodo(random.randint(1, 10))
             
     def promedio_arbol(self):
-        #return mean(self.ver_nodos())
+        #import numpy as np
+        #return np.mean(self.ver_nodos())
         nodos = self.ver_nodos()
         if nodos:
             return sum(nodos) / len(nodos)

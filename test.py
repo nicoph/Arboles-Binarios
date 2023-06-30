@@ -8,8 +8,7 @@ arbol = ArbolBinario()
 
 #funcion crear para arbol 1
 
-def crear_arbol(n):
-    
+def crear_arbol(n):    
     for x in range(n):
         arbol.agregar_nodo(random.choice(range(n)))
 
@@ -24,6 +23,7 @@ print(arbol.promedio_nivel())
 
 #test arbol 2, verión simple
 print('\n', '### Arbol simple ###\n')
+
 arbols=ArbolBinarioSimple()
 arbols.completar_arbol(20)
 
