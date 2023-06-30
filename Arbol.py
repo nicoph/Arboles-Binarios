@@ -33,24 +33,24 @@ class ArbolBinario:
             else:
                 self._agregar_nodo_recursivo(valor, nodo_actual.derecho, nivel + 1)
 
-    def obtener_nodo(self, valor):
-        return self._obtener_nodo_recursivo(valor, self.raiz)
+    def ver_nodo(self, valor):
+        return self._ver_nodo_recursivo(valor, self.raiz)
 
-    def _obtener_nodo_recursivo(self, valor, nodo_actual):
+    def _ver_nodo_recursivo(self, valor, nodo_actual):
         if nodo_actual is None:
             return None
         if nodo_actual.valor == valor:
             return nodo_actual
-        nodo_izquierdo = self._obtener_nodo_recursivo(valor, nodo_actual.izquierdo)
+        nodo_izquierdo = self._ver_nodo_recursivo(valor, nodo_actual.izquierdo)
         if nodo_izquierdo:
             return nodo_izquierdo
-        nodo_derecho = self._obtener_nodo_recursivo(valor, nodo_actual.derecho)
+        nodo_derecho = self._ver_nodo_recursivo(valor, nodo_actual.derecho)
         if nodo_derecho:
             return nodo_derecho
         return None
 
     def establecer_valor(self, valor, nuevo_valor):
-        nodo = self.obtener_nodo(valor)
+        nodo = self.ver_nodo(valor)
         if nodo is not None:
             nodo.valor = nuevo_valor
             
